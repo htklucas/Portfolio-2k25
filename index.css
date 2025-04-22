@@ -1,0 +1,602 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #0e0e0e;
+}
+::-webkit-scrollbar-thumb {
+    transition: .2s ease;
+    background: #ff4281;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #cc005f;
+}
+
+@font-face {
+    font-family: 'Titi';
+    src: url('/Fonts/Titillium_Web/TitilliumWeb-Regular.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TitiSBold';
+    src: url('/Fonts/Titillium_Web/TitilliumWeb-SemiBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    background: linear-gradient(90deg, #000000, #0a0a0a, #1a0006);
+    background-size: cover;
+    color: #fff;
+    font-family: 'Titi';
+    display: grid;
+    place-items: center;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* Cabeçalho */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    z-index: 9999;
+    padding: 10px 0;
+}
+
+header.scrolled {
+    background: linear-gradient(90deg, #000000b0, #0a0a0a91, #1a0006b7);
+    box-shadow: 0 2px 5px #ff4281;
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover {
+    color: #ff4281;
+    transform: scale(1.05);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+header .btnContact button {
+    padding: 10px 40px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'TitiSBold';
+    border: solid 1px #ff4281;
+    border-radius: 30px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+header .btnContact button:hover {
+    box-shadow: 0px 0px 8px #ff4281;
+    background-color: #ff428121;
+}
+
+.menu {
+    margin: auto;
+}
+
+.backgroundTop {
+    background: url('../Imagens/WppTokyoGhoul.jpg') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Início */
+.start {
+    padding-top: 120px;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.startText {
+    margin-top: 15%;
+}
+
+.startText p {
+    font-size: 30px;
+}
+
+.startText span {
+    color: #ff4281;
+}
+
+.startText h1 {
+    font-family: 'TitiSBold';
+    font-size: 40px;
+}
+
+.startButton a {
+    margin-top: 1%;
+    margin-inline: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background-color: transparent;
+    padding: 5px;
+    border: solid 1px #ff4281;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 19px;
+    font-family: 'TitiSBold';
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.startButton a:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 8px #ff4281;
+    background-color: #ff428121;
+}
+
+/* Sobre */
+.about {
+    background-color: #1d0b11;
+    border-top: 10px #ff4281 solid;
+    margin: auto;
+    align-items: center;
+    place-items: center;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    padding: 40px 4%;
+}
+
+.fotoAutoria {
+    transition: .2s;
+    margin-right: 80px;
+}
+
+.fotoAutoria:hover {
+    transform: scale(1.05);
+}
+
+.fotoAutoria img{
+    width: 450px;
+    border-radius: 100%;
+}
+
+.informationTitle {
+    font-family: 'TitiSBold';
+    margin-bottom: 20px;
+    color: #ff4281;
+}
+
+.informationTitle h1 {
+    font-size: 40px;
+}
+
+.informationTitle span {
+    color: #fff;
+}
+
+.informationText {
+    font-size: 20px;
+    margin-right: 200px;
+    display: flex;
+    align-items: center;
+}
+
+/* Currículo */
+.curriculumTitle {
+    font-size: 20px;
+    color: #fff;
+    font-family: 'TitiSBold';
+}
+
+.curriculumTitle span {
+    color: #ff4281;
+}
+
+.CurriculumIMG,
+.CurriculumIMGAlt {
+    height: 500px;
+    width: 300px;
+    margin-inline-start: 100px;
+    transition: .2s;
+}
+
+.CurriculumIMG:hover,
+.CurriculumIMGAlt:hover {
+    transform: scale(1.05);
+}
+
+.curriculumContent {
+    margin: 70px;
+    display: flex;
+}
+
+/* Projetos */
+.project {
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.projectTitle {
+    font-family: 'TitiSBold';
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.projectTitle span {
+    color: #ff4281;
+}
+
+.project main {
+    border: 2px solid #ff4281;
+    border-radius: 30px;
+    position: relative;
+    height: 500px;
+    width: 1000px;
+    overflow: hidden;
+    margin-top: 40px;
+    margin: auto;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.slider .item {
+    width: 500px;
+    height: 300px;
+    list-style-type: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 30px rgba(255, 255, 255, 0.3) inset;
+    transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
+    opacity: 1;
+}
+
+.slider .item:nth-child(1),
+.slider .item:nth-child(2) {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: none;
+    border-radius: 0;
+    box-shadow: none;
+    opacity: 1;
+}
+
+.slider .item:nth-child(3) { left: 50%; }
+.slider .item:nth-child(4) { left: calc(50% + 220px); }
+.slider .item:nth-child(5) { left: calc(50% + 440px); }
+.slider .item:nth-child(6) { left: calc(50% + 660px); opacity: 0; }
+
+.slider .content {
+    width: min(30vw, 400px);
+    position: absolute;
+    top: 50%;
+    left: 3rem;
+    transform: translateY(-50%);
+    font: 400 0.85rem helvetica, sans-serif;
+    color: white;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    display: none;
+}
+
+.slider .content .title {
+    font-family: 'TitiSBold';
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.slider .content .description {
+    font-family: 'Titi';
+    line-height: 1.7;
+    margin: 1rem 0 1.5rem;
+    font-size: 1.2rem;
+}
+
+.slider .content button {
+    padding: 10px 40px;
+    background-color: transparent;
+    color: #fff;
+    font-family: 'TitiSBold';
+    font-size: 18px;
+    transition: .2s;
+    border: solid 1px #ff4281;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.slider .content button:hover {
+    box-shadow: 0px 0px 8px #ff4281;
+    background-color: #ff428121;
+    transform: scale(1.05);
+}
+
+.slider .item:nth-of-type(2) .content {
+    display: block;
+    animation: show 0.75s ease-in-out 0.3s forwards;
+}
+
+@keyframes show {
+    0% {
+        filter: blur(5px);
+        transform: translateY(calc(-50% + 75px));
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+.project .nav {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    user-select: none;
+}
+
+.project .nav .btn {
+    color: #fff;
+    border: solid 1px #ff4281;
+    border-radius: 50%;
+    background-color: transparent;
+    font-size: 18px;
+    font-family: 'TitiSBold';
+    transition: .2s;
+    margin: 0 0.25rem;
+    padding: 0.75rem;
+    cursor: pointer;
+}
+
+.project .nav .btn:hover {
+    box-shadow: 0px 0px 8px #ff4281;
+    background-color: #ff428121;
+    transform: scale(1.05);
+}
+
+/* Responsivo */
+@media (width > 650px) and (width < 900px) {
+    .slider .content .title { font-size: 1rem; }
+    .slider .content .description { font-size: 0.7rem; }
+    .slider .content button { font-size: 0.7rem; }
+
+    .slider .item {
+        width: 160px;
+        height: 270px;
+    }
+
+    .slider .item:nth-child(3) { left: 50%; }
+    .slider .item:nth-child(4) { left: calc(50% + 170px); }
+    .slider .item:nth-child(5) { left: calc(50% + 340px); }
+    .slider .item:nth-child(6) { left: calc(50% + 510px); opacity: 0; }
+}
+
+@media (width < 650px) {
+    .slider .content .title { font-size: 0.9rem; }
+    .slider .content .description { font-size: 0.65rem; }
+    .slider .content button { font-size: 0.7rem; }
+
+    .slider .item {
+        width: 130px;
+        height: 220px;
+    }
+
+    .slider .item:nth-child(3) { left: 50%; }
+    .slider .item:nth-child(4) { left: calc(50% + 140px); }
+    .slider .item:nth-child(5) { left: calc(50% + 280px); }
+    .slider .item:nth-child(6) { left: calc(50% + 420px); opacity: 0; }
+}
+
+/* Porfólios */
+
+.portfolios{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 100px;
+}
+.portfolios h1{
+    font-family: TitiSBold;
+    font-size: 40px;    
+    margin-bottom: 20px;
+}
+
+.portfolios span{
+    color: #ff4281;
+
+}
+
+.portfoliosButton button{
+    margin-inline: 20px;
+    padding: 10px 40px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'TitiSBold';
+    border: solid 1px #ff4281;
+    border-radius: 30px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.portfoliosButton button:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 8px #ff4281;
+    background-color: #ff428121;
+}
+
+/* Rodapé */
+.footer {
+    text-align: center;
+    align-items: center;
+    margin: 20px;
+    margin-bottom: 20px;
+}
+
+.footerImg {
+    transition: .2s;
+    margin-bottom: 30px;
+}
+
+.footerImg:hover {
+    transform: scale(1.05);
+}
+
+.footerText {
+    font-family: 'TitiSBold';
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.footerText span {
+    color: #ff4281;
+}
+
+.footer button {
+    padding: 10px 40px;
+    background-color: transparent;
+    color: #fff;
+    font-family: 'TitiSBold';
+    font-size: 18px;
+    transition: .2s;
+    border: solid 1px #ff4281;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.footer button:hover {
+    box-shadow: 0px 0px 8px #ff4281;
+    background-color: #ff428121;
+    transform: scale(1.05);
+}
+
+/* Responsividade extra */
+@media (max-width: 1024px) {
+    .project main {
+        width: 90%;
+    }
+}
+
+@media (max-width: 900px) {
+    .info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .fotoAutoria {
+        margin: 0 0 20px 0;
+    }
+
+    .informationText {
+        margin: 0;
+    }
+
+    .curriculumContent {
+        flex-direction: column;
+        align-items: center;
+        margin: 40px 10px;
+    }
+
+    .CurriculumIMG, .CurriculumIMGAlt {
+        margin: 20px 0;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    header > .interface {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .btnContact {
+        display: none;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+    }
+
+    header nav ul li {
+        margin-inline: 4%;
+        padding: 10px 0;
+    }
+
+    .btnContact {
+        margin-top: 10px;
+    }
+
+    .startText {
+        margin-top: 30%;
+    }
+
+    .startText p {
+        font-size: 20px;
+    }
+
+    .startText h1 {
+        font-size: 28px;
+    }
+
+    .startButton a {
+        width: 120px;
+        font-size: 16px;
+    }
+}
